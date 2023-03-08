@@ -1,20 +1,11 @@
 import React, { useMemo } from "react";
 import "../css/DetailsCard.css";
-
-import { useTranslation } from "react-i18next";
 import convertToFahrenheit from "../helpers/convertToFahrenheit";
 import CloudsCard from "./CloudsCard";
 import MoreInfoCard from "./MoreInfoCard";
 
-function DetailsCard({
-  weather_icon,
-  data,
-  soundEnabled,
-  isFahrenheitMode,
-  degreeSymbol,
-}) {
+function DetailsCard({ weather_icon, data, isFahrenheitMode, degreeSymbol }) {
   const { clouds, main, weather } = data.list[0];
-  const { t } = useTranslation();
 
   const formattedData = useMemo(() => {
     return {
@@ -47,7 +38,7 @@ function DetailsCard({
         data={{ formattedData, degreeSymbol, weather, weather_icon }}
       />
 
-      <MoreInfoCard data={{ formattedData, degreeSymbol, main, clouds, t }} />
+      <MoreInfoCard data={{ formattedData, degreeSymbol, main, clouds }} />
     </div>
   );
 }
