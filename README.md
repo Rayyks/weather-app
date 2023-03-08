@@ -78,3 +78,4 @@ Weather Application created using ReactJS and APIs provided by OpenAPI.org.
 <div align="center">
 <h3>Show some ❤️ by starring this awesome repository!</h3>
 </div>
+# weather-app
