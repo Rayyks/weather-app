@@ -25,9 +25,7 @@ function App() {
   const [weatherIcon, setWeatherIcon] = useState(
     `https://openweathermap.org/img/wn/10n@2x.png`
   );
-  const [currentLanguage, setLanguage] = useState(() => {
-    return localStorage.getItem("language") || "en";
-  });
+
   const [loading, setLoading] = useState(false);
 
   const [isFahrenheitMode, setIsFahrenheitMode] = useState(false);
