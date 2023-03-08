@@ -1,10 +1,10 @@
-import React, { useMemo } from 'react';
-import '../css/DetailsCard.css';
-import BackgroundSound from './BackgroundSound';
-import { useTranslation } from 'react-i18next';
-import convertToFahrenheit from '../helpers/convertToFahrenheit';
-import CloudsCard from './CloudsCard';
-import MoreInfoCard from './MoreInfoCard';
+import React, { useMemo } from "react";
+import "../css/DetailsCard.css";
+
+import { useTranslation } from "react-i18next";
+import convertToFahrenheit from "../helpers/convertToFahrenheit";
+import CloudsCard from "./CloudsCard";
+import MoreInfoCard from "./MoreInfoCard";
 
 function DetailsCard({
   weather_icon,
@@ -42,13 +42,12 @@ function DetailsCard({
   ]);
 
   return (
-    <div className='details'>
-
-      <CloudsCard data={{ formattedData, degreeSymbol, weather, weather_icon }} />
+    <div className="details">
+      <CloudsCard
+        data={{ formattedData, degreeSymbol, weather, weather_icon }}
+      />
 
       <MoreInfoCard data={{ formattedData, degreeSymbol, main, clouds, t }} />
-
-      <BackgroundSound weather={weather[0]} soundEnabled={soundEnabled} />
     </div>
   );
 }
