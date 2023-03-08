@@ -29,7 +29,7 @@ function App() {
     return localStorage.getItem("language") || "en";
   });
   const [loading, setLoading] = useState(false);
-  const [backgroundSoundEnabled, setBackgroundSoundEnabled] = useState(true);
+
   const [isFahrenheitMode, setIsFahrenheitMode] = useState(false);
   const degreeSymbol = useMemo(
     () => (isFahrenheitMode ? "\u00b0F" : "\u00b0C"),
@@ -308,7 +308,6 @@ function App() {
                   <DetailsCard
                     weather_icon={weatherIcon}
                     data={weatherData}
-                    soundEnabled={backgroundSoundEnabled}
                     isFahrenheitMode={isFahrenheitMode}
                     degreeSymbol={degreeSymbol}
                   />
